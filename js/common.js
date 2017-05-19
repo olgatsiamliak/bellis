@@ -1,8 +1,4 @@
 $(document).ready(function(){  
-        $("a[rel='colorbox']").colorbox({
-         loop: false,
-         maxWidth: 1000
-    });
     $('.reviews-list_link').click(function () {
       $('.popup-bg, .popup-content').addClass('show');
       $('body').addClass('hidden');
