@@ -95,14 +95,11 @@ $(document).ready(function(){
             title   : "Меню"
         },
         navbars     : true
-        });             
+        });     
+        $('.workers-list').addClass('workers-list_mobile');        
     }
     if ($(window).width() <= 1008) {
       $('nav').removeClass('fixed').addClass('mobile');
-      $('.inner-nav_title').click(function () {
-      $(this).toggleClass('open');
-      $('.inner-nav').toggleClass('visible');
-    });
     }
   if ($(window).width() > 1008) {
     $('nav').removeClass('mobile').addClass('fixed');
@@ -192,6 +189,40 @@ $(document).ready(function(){
         navbars     : true
         });             
     }
+    $('.inner-nav_title').click(function () {
+      $(this).toggleClass('open');
+      $('.inner-nav').toggleClass('visible');
+      $('#scrollbar').css('top','127px');
+    });  
+    $(".workers-list_mobile").mCustomScrollbar({
+	axis:"x",
+	theme:"dark",
+	scrollbarPosition: "inside",
+	mouseWheel: "disable",
+	contentTouchScroll:5,
+	advanced:{autoExpandHorizontalScroll:true},
+	callbacks:{
+      whileScrolling: function(){
+          $('.mCS_img_loaded').addClass('return');
+      },
+      onTotalScroll: function(){
+          $('.mCS_img_loaded').removeClass('return');
+      },
+      onTotalScrollBack: function(){
+          $('.mCS_img_loaded').removeClass('return');
+      }
+}
+    });
+    $("nav.mobile").mCustomScrollbar({
+	axis:"x",
+	theme:"dark",
+	autoExpandScrollbar:false,
+	autoHideScrollbar:true,
+	scrollbarPosition: "inside",
+	mouseWheel: "disable",
+	contentTouchScroll:5,
+	advanced:{autoExpandHorizontalScroll:true}
+});
 });
 $(window).resize(function() {  
 if ($(window).width() <= 900) {
@@ -207,19 +238,34 @@ if ($(window).width() <= 900) {
             title   : "Меню"
         },
         navbars     : true
-        });    
+        });   
+    $('.workers-list').addClass('workers-list_mobile');
+    $(".workers-list_mobile").mCustomScrollbar({
+	axis:"x",
+	theme:"dark",
+	scrollbarPosition: "inside",
+	mouseWheel: "disable",
+	contentTouchScroll:5,
+	advanced:{autoExpandHorizontalScroll:true}
+    });
+    $("nav.mobile").mCustomScrollbar({
+	axis:"x",
+	theme:"dark",
+	autoExpandScrollbar:false,
+	autoHideScrollbar:true,
+	scrollbarPosition: "inside",
+	mouseWheel: "disable",
+	contentTouchScroll:5,
+	advanced:{autoExpandHorizontalScroll:true}
+});
     }
      if ($(window).width() > 900) {
         $('#base-filters').removeClass('show');
         $('body').removeClass('hidden');
+        $('.workers-list').removeClass('workers-list_mobile');
      }
   if ($(window).width() <= 1008) {
     $('nav').removeClass('fixed').addClass('mobile');
-    $('.inner-nav_title').click(function () {
-      $(this).toggleClass('open');
-      $('.inner-nav').toggleClass('visible');
-      $('#scrollbar').css('top','127px');
-    });          
     var $menu = $("#base-filters").mmenu({
         offCanvas: false,
         extensions: [
