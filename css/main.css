@@ -321,7 +321,7 @@ nav.mobile .main-nav li a:after {display: none;}
 .contacts-title {font-weight: 700;font-size: 18px;
     position: relative;
     cursor: pointer; padding: 35px;}
-.contacts-title:after {position: absolute;
+.contacts-title_toggle:after {position: absolute;
     content: "";
     right: 35px;
     top: 0;
@@ -354,7 +354,7 @@ nav.mobile .main-nav li a:after {display: none;}
 .contacts-nav li.active {color: #9b9da6;}
 .contacts-nav li.active a, .contacts-nav li:hover a  {border-bottom: none;}
 .contacts-nav li:hover {color: #4e67b3;}
-#contacts-map {margin-bottom: 100px;}
+#contacts-map {margin-bottom: 100px;border:none;}
 .map {position: relative;margin-top: 26px;padding-bottom: 20px;}
 .btn-map_intro {position: absolute;width: 35px;-z-index: 12;left:20px;top:20px;}
 .btn-map_intro .btn-map_walk, .btn-map_intro .btn-map_car {cursor: pointer;width: 100%;height: 35px;background: #15428E;display: table;text-align: center;}
