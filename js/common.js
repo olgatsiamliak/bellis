@@ -153,7 +153,7 @@ $(document).ready(function(){
         });  
         $('.faq-title').on('click',function(){$(this).toggleClass('open').next().toggleClass('show');}); 
         $('.vacancy-list_title').on('click',function(){$(this).next().toggleClass('show').parent().toggleClass('open');});
-        $('.contacts-title').on('click',function(){$(this).next().toggleClass('show').parent().toggleClass('open');});  
+        $('.contacts-title_toggle').on('click',function(){$(this).next().toggleClass('show').parent().toggleClass('open');});  
         var accordionsMenu = $('.desktop-filters');
         if( accordionsMenu.length > 0 ) {
           accordionsMenu.each(function(){
