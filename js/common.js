@@ -152,7 +152,8 @@ $(document).ready(function(){
             });
         });  
         $('.faq-title').on('click',function(){$(this).toggleClass('open').next().toggleClass('show');}); 
-        $('.vacancy-list_title').on('click',function(){$(this).next().toggleClass('show').parent().toggleClass('open');});  
+        $('.vacancy-list_title').on('click',function(){$(this).next().toggleClass('show').parent().toggleClass('open');});
+        $('.contacts-title').on('click',function(){$(this).next().toggleClass('show').parent().toggleClass('open');});  
         var accordionsMenu = $('.desktop-filters');
         if( accordionsMenu.length > 0 ) {
           accordionsMenu.each(function(){
@@ -194,25 +195,6 @@ $(document).ready(function(){
       $('.inner-nav').toggleClass('visible');
       $('#scrollbar').css('top','127px');
     });  
-    $(".workers-list_mobile").mCustomScrollbar({
-	axis:"x",
-	theme:"dark",
-	scrollbarPosition: "inside",
-	mouseWheel: "disable",
-	contentTouchScroll:5,
-	advanced:{autoExpandHorizontalScroll:true},
-	callbacks:{
-      whileScrolling: function(){
-          $('.mCS_img_loaded').addClass('return');
-      },
-      onTotalScroll: function(){
-          $('.mCS_img_loaded').removeClass('return');
-      },
-      onTotalScrollBack: function(){
-          $('.mCS_img_loaded').removeClass('return');
-      }
-}
-    });
     $("nav.mobile").mCustomScrollbar({
 	axis:"x",
 	theme:"dark",
@@ -239,15 +221,6 @@ if ($(window).width() <= 900) {
         },
         navbars     : true
         });   
-    $('.workers-list').addClass('workers-list_mobile');
-    $(".workers-list_mobile").mCustomScrollbar({
-	axis:"x",
-	theme:"dark",
-	scrollbarPosition: "inside",
-	mouseWheel: "disable",
-	contentTouchScroll:5,
-	advanced:{autoExpandHorizontalScroll:true}
-    });
     $("nav.mobile").mCustomScrollbar({
 	axis:"x",
 	theme:"dark",
