@@ -296,6 +296,7 @@ nav.mobile .main-nav li a:after {display: none;}
 .inner-nav li:last-child a {border-bottom: none;}
 .inner-nav li:hover a {color: #9b9da6;}
 .content-inner_text {margin-right: 376px;}
+.content-inner_text.content-inner_workers {margin-right: 0;}
 .text-page p, .text-page li, .text-page ol, .text-page ul {margin-bottom: 20px;}
 .text-page h2, .text-page h3, .text-page h4 {margin-bottom: 30px;font-size: 18px;font-weight: 700;}
 .content-inner_list {display: -webkit-flex;
@@ -317,10 +318,26 @@ nav.mobile .main-nav li a:after {display: none;}
 .text-page ul.content-inner_list li {padding-left: 26px;}
 .text-page ul.content-inner_list li:before {display: none;}
 #scrollbar.fixed {z-index: 12;position: fixed;top: 20px;}
-.contacts-title {font-weight: 700;margin-bottom: 26px;font-size: 18px;margin-top: 30px;}
-.workers-list {padding-bottom: 10px;border-bottom: 1px solid #EBEBEB;}
-.workers-list li {display: inline-block; vertical-align: top; width: 345px;margin-bottom: 26px}
-.workers-list li:nth-child(2n) {margin-left: 30px;}
+.contacts-title {font-weight: 700;font-size: 18px;
+    position: relative;
+    cursor: pointer; padding: 35px;}
+.contacts-title:after {position: absolute;
+    content: "";
+    right: 35px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 11px;
+    height: 6px;
+    background: url(../img/arrow-vac.svg) center center no-repeat;
+    background-size: 11px 6px;
+}
+.content-inner_contacts {border: 1px solid #EAEAEA;border: 1px solid #EAEAEA;
+    margin-bottom: 26px;
+}
+.workers-list_intro {padding: 0 35px;display: none;}
+.workers-list_intro.show {display: block;}
+.workers-list li {display: inline-block; vertical-align: top; width: 33%;margin-bottom: 26px;padding-right: 10px}
 .workers-thumb {float: left;width: 120px;}
 .workers-intro {margin-left: 136px;}
 .worker-position {font-size: 15px;color: #adadad;margin-bottom: 10px;} 
@@ -338,7 +355,7 @@ nav.mobile .main-nav li a:after {display: none;}
 .contacts-nav li.active a, .contacts-nav li:hover a  {border-bottom: none;}
 .contacts-nav li:hover {color: #4e67b3;}
 #contacts-map {margin-bottom: 100px;}
-.map {position: relative;margin-top: 26px;}
+.map {position: relative;margin-top: 26px;padding-bottom: 20px;}
 .btn-map_intro {position: absolute;width: 35px;-z-index: 12;left:20px;top:20px;}
 .btn-map_intro .btn-map_walk, .btn-map_intro .btn-map_car {cursor: pointer;width: 100%;height: 35px;background: #15428E;display: table;text-align: center;}
 .btn-map_walk span, .btn-map_car span {vertical-align: middle;display: table-cell;}
@@ -346,7 +363,6 @@ nav.mobile .main-nav li a:after {display: none;}
 .btn-map_walk.active svg,  .btn-map_car.active svg {fill: #A9ABAB;}
 .btn-map_walk:hover, .btn-map_car:hover {background: #3E67B7}
 .btn-map_walk span svg, .btn-map_car span svg, .btn-map_walk:hover svg, .btn-map_car:hover svg {fill: #FFFFFF;}
-.content-inner_text #contacts-map p.contacts-title {margin-bottom: 20px;}
 #scrollbar_title {display: none;}
 #search_form_faq {position: relative;}
 .search_query:focus {outline: none;}
@@ -578,8 +594,7 @@ nav.mobile .main-nav li a:after {display: none;}
 .catalog-nav li:first-child a {padding-left: 0;}
 .catalog-nav li:first-child .submenu {padding-left: 0}
 }
-@media only screen and (max-width: 1240px) {
-  .workers-list li:nth-child(2n) {margin-left: 3%;}
+@media only screen and (max-width: 1024px) {
   .workers-list li {width: 48%;}
 }
 @media only screen and (max-width: 1144px) {
@@ -612,11 +627,9 @@ nav.mobile .main-nav li a:after {display: none;}
 .icons-block_list li .icons-block_title {font-size: 11px;}
 }
 @media only screen and (max-width: 1008px) {  
-    .workers-list li {width: 345px;}
     .workers-list {width: 100%;overflow-x: auto;}
 .workers-list_text {padding: 30px 16px;}
 .workers-list_text.workers-list {min-width: 100%;}
-.workers-list li:nth-child(2n) {margin-left: 30px;}
   .inner-nav_title {font-size: 15px;}
   .hidden {overflow-y: hidden;height: 100%;width: 100%;}
 .icons-block_list li {width: 33.3%}
@@ -757,12 +770,11 @@ nav.mobile .main-nav li a:after {display: none;}
   .pagetitle-intro_overlay {text-align: center;padding: 65px 0 50px 0;}
   .text-page_title {width: 40%;}
   nav.mobile {top: 80px !important;}
-  .workers-list_mobile {height: 250px;}
   nav.mobile {-moz-scroll-behavior: smooth;-ms-scroll-behavior: smooth;-webkit-scroll-behavior: smooth;scroll-behavior: smooth;}
   .container_workers {padding: 0;}
-  .contacts-nav, .contacts-title {padding: 0 20px;}
-  .workers-list_mobile li:first-child {padding-left: 20px;}
+ .content-inner_text.content-inner_workers {padding: 20px;}
   .contacts-tabs_content p, .map {padding: 0 20px;}
+  .map {padding-bottom: 20px;}
   .btn-map_intro {left: 40px;}
   }
   @media only screen and (max-width: 890px) {
@@ -770,6 +782,9 @@ nav.mobile .main-nav li a:after {display: none;}
 .news-block_list.news-block_text li:nth-child(2n) {margin-left: 0;}
 #vacancy-form .text-field {width: 100%;}
 .product-configuration_content .sb-slidebar {width: 100%;top:0;max-height: 100%;border: none;border-radius:0;}
+}
+  @media only screen and (max-width: 800px) {
+.workers-list li {width: 100%;padding-right: 0;}
 }
 @media only screen and (max-width: 754px) {
 #vacancy-form {width: 100%;max-width: none;}
@@ -825,7 +840,6 @@ nav.mobile .main-nav li { -webkit-animation: chapternav-slidein 350ms backwards;
 .popup-content #vacancy-form_popup .btn-vacancy {float: none;}
 .popup-content .btn-vacancy_intro {position: relative; padding-top: 61px;}
 .popup-content #vacancy-form_popup .btn-vacancy_attach {position: absolute;top:0;left:0;right: 0;width: 100%;}
-.workers-list li {width: 305px;}
 }
 @media only screen and (max-width: 458px) {
 .icons-block_list li .icons-block_title {
@@ -845,14 +859,11 @@ nav.mobile .main-nav li { -webkit-animation: chapternav-slidein 350ms backwards;
 @media only screen and (max-width: 404px) {
 .icons-block_list li .icons-block_cell {padding-left: 0;}
 .news-content_title {font-size: 14px;line-height: 14px;}
-.workers-list li {width: 205px;}
 .worker-position {font-size: 11px;}
 .worker-name {font-size: 15px;}
 .worker-phone, .worker-email, .worker-skype {font-size: 12px;}
 .workers-thumb {width: 70px;}
 .workers-intro {margin-left: 80px;}
-.workers-list_mobile {
-    height: 200px;}
 }
 @media only screen and (max-width: 380px) {
 .icons-block_list li .icons-block_cell { width: 50px;}
