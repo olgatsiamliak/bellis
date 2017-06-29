@@ -211,24 +211,10 @@
 			</div>
 			<div class="content-inner">
 					<div class="container container_workers">
-						<div class="content-inner_right" id="scrollbar">
-							<div class="content-inner_nav">
-							<p id="scrollbar_title">Меню</p>
-								<ul class="inner-nav" id="scrollbar_list">
-									<li><a href="#contacts-head" class="selected active">Приемная руководителя</a></li>
-									<li><a href="#contacts-certification">Отделение сертификации</a></li>
-									<li><a href="#contacts-lab">АИЛ</a></li>
-									<li><a href="#contacts-standart">Отделение стандартизации</a></li>
-									<li><a href="#contacts-bookkeeping">Бухгалтерия</a></li>
-									<li><a href="#contacts-copy">Копии сертификатов</a></li>
-									<li><a href="#contacts-orders">Прием запросов от заказчиков</a></li>
-									<li><a href="#contacts-map">Как добраться?</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="content-inner_text">			
-							<div class="content-inner_contacts" id="contacts-head">
+						<div class="content-inner_text content-inner_workers">			
+							<div class="content-inner_contacts open" id="contacts-head">
 								<p class="contacts-title">Приемная руководителя</p>
+								<div class="workers-list_intro show">
 								<ul class="workers-list">
 									<li>
 										<div class="workers-thumb">
@@ -302,9 +288,11 @@
 										</div>
 									</li>
 								</ul>
+								</div>
 							</div>
 							<div class="content-inner_contacts" id="contacts-certification">
 								<p class="contacts-title">Отделение сертификации</p>
+								<div class="workers-list_intro">
 								<ul class="contacts-nav">
 									<li class="active"><a href="#contacts-service">продукция и услуги</a></li>
 									<li><a href="#contacts-quality">системы менеджмента качества</a></li>
@@ -373,9 +361,11 @@
 										</li>									
 									</ul>
 								</div>
+								</div>
 							</div>
 							<div class="content-inner_contacts" id="contacts-lab">
 								<p class="contacts-title">Акредитованная испытательная лпборатория (АИЛ)</p>
+								<div class="workers-list_intro">
 								<ul class="workers-list">
 									<li>
 										<div class="workers-thumb">
@@ -431,8 +421,10 @@
 									</li>									
 								</ul>
 							</div>
+							</div>
 							<div class="content-inner_contacts" id="contacts-standart">
 								<p class="contacts-title">Отделение стандартизации</p>
+								<div class="workers-list_intro">
 								<ul class="workers-list">
 									<li>
 										<div class="workers-thumb">
@@ -487,9 +479,11 @@
 										</div>
 									</li>									
 								</ul>
-							</div>
+								</div>
+							</div>							
 							<div class="content-inner_contacts" id="contacts-bookkeeping">
 								<p class="contacts-title">Бухгалтерия</p>
+								<div class="workers-list_intro">
 								<ul class="workers-list">
 									<li>
 										<div class="workers-thumb">
@@ -531,9 +525,11 @@
 										</div>
 									</li>																
 								</ul>
+								</div>
 							</div>
 							<div class="content-inner_contacts" id="contacts-copy">
 								<p class="contacts-title">Копии сертификатов</p>
+								<div class="workers-list_intro">
 								<ul class="workers-list">
 									<li>
 										<div class="workers-thumb">
@@ -548,9 +544,11 @@
 										</div>
 									</li>																							
 								</ul>
+								</div>
 							</div>							
 							<div class="content-inner_contacts" id="contacts-orders">
 								<p class="contacts-title">Прием запросов от заказчиков</p>
+								<div class="workers-list_intro">
 								<ul class="workers-list">
 									<li>
 										<div class="workers-thumb">
@@ -563,9 +561,11 @@
 										</div>
 									</li>																							
 								</ul>
+								</div>
 							</div>
 							<div class="content-inner_contacts" id="contacts-map">
 									<p class="contacts-title">Как добраться</p>
+									<div class="workers-list_intro">
 									<ul class="contacts-nav">
 										<li class="active"><a href="#contacts-office">Офис</a></li>
 										<li><a href="#contacts-map_lab">Лаборатория</a></li>
@@ -592,6 +592,8 @@
 											<img src="img/map.jpg" alt="" />
 										</div>
 									</div>
+									</div>
+							</div>
 							</div>
 						</div>					
 					</div>
@@ -674,9 +676,7 @@
     </div>
 	<script type="text/javascript" src="js/jquery.2.1.4.js"></script>
 	<script src="js/jquery.mmenu.all.min.js"></script>
-	<script src="js/scrollto.js"></script>
 	<script src="js/common.js" type="text/javascript"></script>	
-	<script type="text/javascript" src="js/sticky.js"></script>
 	<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 </body>
