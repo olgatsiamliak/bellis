@@ -538,7 +538,7 @@ nav.mobile .main-nav li a:after {display: none;}
 .base-results_list li a {display: block;padding: 20px 0 20px 40px;border-bottom: 1px solid #EEEEEE;}
 .base-results_list li a.doc {background: url(../img/doc.svg) center left no-repeat;}
 .base-results_list li a.pdf {background: url(../img/pdf.svg) center left no-repeat;}
-.base-results_list li a.ext {background: url(../img/exs.svg) center left no-repeat;background-size: 26px 20px;}
+.base-results_list li a.ext {background: url(../img/exs.svg) center left no-repeat;background-size: 26px 15px;}
 .desktop-filters li label, .desktop-filters li a {cursor: pointer;display: block;padding-left: 40px;color: #515151;position: relative;}
 .desktop-filters ul {padding-left: 20px;}
 .desktop-filters li label:before, .desktop-filters li a:before {position: absolute;content: "";left: 16px;top:1px;margin: auto;width: 16px;height: 16px;background: url(../img/folder-close.svg) center center no-repeat;background-size: 16px 16px;}
@@ -551,7 +551,7 @@ nav.mobile .main-nav li a:after {display: none;}
     transition: linear 0.8s;}
 .desktop-filters ul li:first-child {margin-top: 10px;}
 .desktop-filters li > ul.show {opacity: 1;max-height: 1500px;}
-.desktop-filters input[type="checkbox"]:checked + label:after {background: url(../img/base_open.svg) center center no-repeat;background-size: 8px 8px;}
+.desktop-filters input[type="checkbox"]:checked + label:after {background: url(../img/base_open.svg) center center no-repeat;background-size: 8px 2px;}
 .desktop-filters input[type="checkbox"] {display: none;}
 .desktop-filters li:last-child {margin-bottom: 0;}
 #base-filters {display: none;}
